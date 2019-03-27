@@ -1,0 +1,4 @@
+if [ $(md5sum /etc/crontab | awk '{print $1}') != 8f111d100ea459f68d333d63a8ef2205 ]; then
+    echo 'mail -s "modification crontab" root < /etc/crontab'
+fi
+echo "0 0 * * * root /etc/crontab" | crontab

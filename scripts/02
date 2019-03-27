@@ -1,0 +1,4 @@
+echo 'apt-get update -y > /var/log/update_script.log' >> my_script.sh
+echo 'apt-get upgrade -y >> /var/log/update_script.log' >> my_script.sh
+chmod a+x my_script.sh
+echo "0 4 * * 1 root /var/log/update_script.log" | crontab

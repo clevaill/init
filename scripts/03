@@ -1,0 +1,1 @@
+sudo du $1 | sort -nr
